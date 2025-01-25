@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_person__business_entity_address
+    description: "{{ doc('stg_person__business_entity_address__description') }}" 
+    
+    columns:
+      - name: business_entity_id
+        description: "{{ doc('stg_person__business_entity_address__business_entity_id') }}"
+        data_tests: ['unique', 'not_null']
+
+      - name: address_id
+        description: "{{ doc('stg_person__business_entity_address__address_id') }}"
+
+      - name: address_type_id
+        description: "{{ doc('stg_person__business_entity_address__address_type_id') }}"

@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_human_resources__employee
+    description: "{{ doc('stg_human_resources__employee__description') }}" 
+
+    columns:
+      - name: pk_employee
+        description: "{{ doc('stg_human_resources__employee__pk_employee') }}"
+        data_tests: ['unique', 'not_null']
+
+      - name: id_national_number
+        description: "{{ doc('stg_human_resources__employee__id_national_number') }}"
+
+      - name: job_title
+        description: "{{ doc('stg_human_resources__employee__job_title') }}"
+
+      - name: birth_date
+        description: "{{ doc('stg_human_resources__employee__birth_date') }}"
+
+      - name: maritial_status
+        description: "{{ doc('stg_human_resources__employee__maritial_status') }}"
+
+      - name: gender
+        description: "{{ doc('stg_human_resources__employee__gender') }}"
+        
+      - name: hire_date
+        description: "{{ doc('stg_human_resources__employee__hire_date') }}"

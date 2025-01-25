@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_person__country_region
+    description: "{{ doc('stg_person__country_region__description') }}" 
+    
+    columns:
+      - name: business_entity_id
+        description: "{{ doc('stg_person__country_region__country_id') }}"
+        data_tests: ['unique', 'not_null']
+
+      - name: country_name
+        description: "{{ doc('stg_person__country_region__country_name') }}"

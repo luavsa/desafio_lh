@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_sales__store
+    description: "{{ doc('stg_sales__store__description') }}" 
+
+    columns:
+      - name: business_entity_id
+        description: "{{ doc('stg_sales__store__business_entity_id') }}"
+        data_tests: ['unique', 'not_null']
+
+      - name: sales_person_id
+        description: "{{ doc('stg_sales__store__sales_person_id') }}"
+
+      - name: store_name
+        description: "{{ doc('stg_sales__store__store_name') }}"

@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_sales__country_region_currency
+    description: "{{ doc('stg_sales__country_region_currency__description') }}" 
+
+    columns:
+      - name: pk_country_currency
+        description: "{{ doc('stg_sales__country_region_currency__pk_country_currency') }}"
+        data_tests: ['unique', 'not_null']
+
+      - name: fk_currency
+        description: "{{ doc('stg_sales__country_region_currency__fk_currency') }}"

@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: stg_sales__sales_person
+    description: "{{ doc('stg_sales__sales_person__description') }}" 
+
+    columns:
+      - name: fk_business_entity
+        description: "{{ doc('stg_sales__sales_person__fk_business_entity') }}"
+        data_tests: ['unique', 'not_null']
+
+      - name: fk_territory
+        description: "{{ doc('stg_sales__sales_person__fk_territory') }}"
+
+      - name: sales_quota
+        description: "{{ doc('stg_sales__sales_person__sales_quota') }}"
+
+      - name: bonus
+        description: "{{ doc('stg_sales__sales_person__bonus') }}"
+
+      - name: comission_pct
+        description: "{{ doc('stg_sales__sales_person__comission_pct') }}"
+
+      - name: sales_ytd
+        description: "{{ doc('stg_sales__sales_person__sales_ytd') }}"
+        
+      - name: sales_last_year
+        description: "{{ doc('stg_sales__sales_person__sales_last_year') }}"
+

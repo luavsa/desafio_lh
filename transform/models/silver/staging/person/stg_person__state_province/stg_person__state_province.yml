@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_person__state_province
+    description: "{{ doc('stg_person__state_province__description') }}" 
+
+    columns:
+      - name: state_province_id
+        description: "{{ doc('stg_person__state_province__state_province_id') }}"
+        data_tests: ['unique', 'not_null']
+
+      - name: country_id
+        description: "{{ doc('stg_person__state_province__country_id') }}"
+
+      - name: state_province_code
+        description: "{{ doc('stg_person__state_province__state_province_code') }}"
+
+      - name: state_province_name
+        description: "{{ doc('stg_person__state_province__state_province_name') }}"
+

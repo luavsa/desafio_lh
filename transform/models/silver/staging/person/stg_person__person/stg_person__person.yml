@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_person__person
+    description: "{{ doc('stg_person__person__description') }}" 
+    
+    columns:
+      - name: person_id
+        description: "{{ doc('stg_person__person__person_id') }}"
+        data_tests: ['unique', 'not_null']
+
+      - name: person_type
+        description: "{{ doc('stg_person__person__person_type') }}"
+
+      - name: person_name
+        description: "{{ doc('stg_person__person__person_name') }}"

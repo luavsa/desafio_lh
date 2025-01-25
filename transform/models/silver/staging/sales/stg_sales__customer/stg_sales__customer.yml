@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_sales__customer
+    description: "{{ doc('stg_sales__customer__description') }}" 
+    
+    columns:
+      - name: customer_id
+        description: "{{ doc('stg_sales__customer__customer_id') }}"
+        data_tests: ['unique', 'not_null']
+
+      - name: person_id
+        description: "{{ doc('stg_sales__customer__person_id') }}"
+
+      - name: store_id
+        description: "{{ doc('stg_sales__customer__store_id') }}"
+
+      - name: territory_id
+        description: "{{ doc('stg_sales__customer__territory_id') }}"
