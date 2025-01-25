@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: dim_territory
+    description: "{{ doc('dim_territory__description') }}" 
+      
+    columns:
+      - name: pk_credit_card
+        description: "{{ doc('stg_sales__credit_card__pk_credit_card') }}" 
+        data_tests: ['unique', 'not_null']
+
+      - name: credit_card_type
+        description: "{{ doc('stg_sales__credit_card__credit_card_type') }}" 

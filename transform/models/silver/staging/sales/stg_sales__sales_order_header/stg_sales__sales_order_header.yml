@@ -1,0 +1,65 @@
+version: 2
+
+models:
+  - name: stg_sales__sales_order_header
+    description: "{{ doc('stg_sales__sales_order_header__description') }}" 
+
+    columns:
+      - name: pk_sales_order
+        description: "{{ doc('stg_sales__sales_order_header__pk_sales_order') }}"
+        data_tests: ['unique', 'not_null']
+
+      - name: fk_territory
+        description: "{{ doc('stg_sales__sales_order_header__fk_territory') }}"
+
+      - name: fk_customer
+        description: "{{ doc('stg_sales__sales_order_header__fk_customer') }}"
+
+      - name: fk_bill_address
+        description: "{{ doc('stg_sales__sales_order_header__fk_bill_address') }}"
+
+      - name: fk_ship_address
+        description: "{{ doc('stg_sales__sales_order_header__fk_ship_address') }}"
+
+      - name: fk_ship_method
+        description: "{{ doc('stg_sales__sales_order_header__fk_ship_method') }}"
+        
+      - name: fk_credit_card
+        description: "{{ doc('stg_sales__sales_order_header__fk_credit_card') }}"
+        
+      - name: fk_currency_rate
+        description: "{{ doc('stg_sales__sales_order_header__fk_currency_rate') }}"
+      
+      - name: revision_number
+        description: "{{ doc('stg_sales__sales_order_header__revision_number') }}"
+
+      - name: order_date
+        description: "{{ doc('stg_sales__sales_order_header__order_date') }}"
+      
+      - name: due_date
+        description: "{{ doc('stg_sales__sales_order_header__due_date') }}"
+      
+      - name: ship_date
+        description: "{{ doc('stg_sales__sales_order_header__ship_date') }}"
+      
+      - name: status
+        description: "{{ doc('stg_sales__sales_order_header__status') }}"
+
+      - name: online_order_flag
+        description: "{{ doc('stg_sales__sales_order_header__online_order_flag') }}"
+
+      - name: purchase_order_number
+        description: "{{ doc('stg_sales__sales_order_header__purchase_order_number') }}"
+
+      - name: order_subtotal
+        description: "{{ doc('stg_sales__sales_order_header__order_subtotal') }}"
+
+      - name: order_tax_mt
+        description: "{{ doc('stg_sales__sales_order_header__order_tax_mt') }}"
+
+      - name: order_freight
+        description: "{{ doc('stg_sales__sales_order_header__order_freight') }}"
+
+      - name: order_total_due
+        description: "{{ doc('stg_sales__sales_order_header__order_total_due') }}"
+        

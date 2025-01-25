@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_purchasing__ship_method
+    description: "{{ doc('stg_purchasing__ship_method__description') }}" 
+
+    columns:
+      - name: pk_ship_method
+        description: "{{ doc('stg_purchasing__ship_method__pk_ship_method') }}"
+        data_tests: ['unique', 'not_null']
+
+      - name: nm_ship_method
+        description: "{{ doc('stg_purchasing__ship_method__nm_ship_method') }}"
+
+      - name: ship_base
+        description: "{{ doc('stg_purchasing__ship_method__ship_base') }}"
+
+      - name: ship_rate
+        description: "{{ doc('stg_purchasing__ship_method__ship_rate') }}"
+

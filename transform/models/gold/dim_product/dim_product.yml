@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: dim_product
+    description: "{{ doc('dim_product__description') }}" 
+
+    columns:
+      - name: product_id
+        description: "{{ doc('stg_production__product__product_id') }}"
+        data_tests: ['unique', 'not_null']
+
+      - name: product_name
+        description: "{{ doc('stg_production__product__product_name') }}"
+
+      - name: product_number
+        description: "{{ doc('stg_production__product__product_number') }}"
+
+      - name: product_category
+        description: "{{ doc('stg_production__product_category__product_category_name') }}"
+
+      - name: product_subcategory
+        description: "{{ doc('stg_production__product_subcategory__product_subcategory_name') }}"
+
+      - name: product_model
+        description: "{{ doc('stg_production__product_model__product_model_name') }}"
+
+      - name: product_line
+        description: "{{ doc('stg_production__product__product_line') }}"

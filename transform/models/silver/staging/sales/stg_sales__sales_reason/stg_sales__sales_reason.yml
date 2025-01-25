@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_sales__sales_reason
+    description: "{{ doc('stg_sales__sales_reason__description') }}" 
+
+    columns:
+      - name: pk_sales_reason
+        description: "{{ doc('stg_sales__sales_reason__pk_sales_reason') }}"
+        data_tests: ['unique', 'not_null']
+
+      - name: nm_sales_reason
+        description: "{{ doc('stg_sales__sales_reason__nm_sales_reason') }}"
+
+      - name: sales_reason_type
+        description: "{{ doc('stg_sales__sales_reason__sales_reason_type') }}"

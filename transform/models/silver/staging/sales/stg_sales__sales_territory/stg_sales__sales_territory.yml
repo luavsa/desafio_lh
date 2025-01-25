@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_sales__sales_territory
+    description: "{{ doc('stg_sales__sales_territory__description') }}" 
+
+    columns:
+      - name: territory_id
+        description: "{{ doc('stg_sales__sales_territory__territory_id') }}"
+        data_tests: ['unique', 'not_null']
+
+      - name: territory_name
+        description: "{{ doc('stg_sales__sales_territory__territory_name') }}"
+
+      - name: country_region_code
+        description: "{{ doc('stg_sales__sales_territory__country_region_code') }}"
+
+      - name: territory_group
+        description: "{{ doc('stg_sales__sales_territory__territory_group') }}"

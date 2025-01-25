@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_sales__sales_order_header_sales_reason
+    description: "{{ doc('stg_sales__sales_order_header_sales_reason__description') }}" 
+
+    columns:
+      - name: fk_order
+        description: "{{ doc('stg_sales__sales_order_header_sales_reason__fk_order') }}"
+        data_tests: ['unique', 'not_null']
+
+      - name: fk_sales_reason
+        description: "{{ doc('stg_sales__sales_order_header_sales_reason__fk_sales_reason') }}"

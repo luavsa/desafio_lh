@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: "{{ doc('dim_customer__description') }}" 
+      
+    columns:
+      - name: customer_id
+        description: "{{ doc('stg_sales__customer__customer_id') }}"
+        data_tests: ['unique', 'not_null']
+
+      - name: customer_name
+        description: "{{ doc('stg_person__person__person_name') }}"
+
+      - name: city_name
+        description: "{{ doc('stg_person__address__city_name') }}"
+
+      - name: state_province
+        description: "{{ doc('stg_person__state_province__state_province_name') }}"
+
+      - name: country_name
+        description: "{{ doc('stg_person__country_region__country_name') }}"

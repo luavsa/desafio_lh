@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: agg_seller
+    description: "{{ doc('agg_seller__description') }}" 
+      
+    columns:
+      - name: seller_uid
+        description: "{{ doc('stg_sales__credit_card__pk_credit_card') }}" 
+        data_tests: ['unique', 'not_null']
+
+      - name: seller_name
+        description: "{{ doc('stg_sales__credit_card__credit_card_type') }}" 
+
+      - name: job_title
+        description: "{{ doc('stg_sales__credit_card__credit_card_type') }}" 
+
+      - name: total_orders
+        description: "{{ doc('stg_sales__credit_card__credit_card_type') }}" 
+      
+      - name: total_value
+        description: "{{ doc('stg_sales__credit_card__credit_card_type') }}" 
