@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: pivoted_entity_address
+    description: "{{ doc('pivoted_entity_address__description') }}" 
+
+    columns:
+      - name: entity_address_uid
+        description: "{{ doc('pivoted_entity_address__entity_address_uid') }}"
+        data_tests: ['unique', 'not_null']
+
+      - name: entity_address_id
+        description: "{{ doc('pivoted_entity_address__entity_address_id') }}"
+
+      - name: city_name
+        description: "{{ doc('stg_person__address__city_name') }}"
+      
+      - name: state_province_name
+        description: "{{ doc('stg_person__state_province__state_province_name') }}"
+
+      - name: country_region_name
+        description: "{{ doc('stg_person__country_region__country_name') }}"
