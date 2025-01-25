@@ -1,0 +1,47 @@
+version: 2
+
+sources:
+  - name: aw_production
+    database: ADVENTURE_WORKS_RAW_DB  
+    schema: production
+    tables:
+      - name: billofmaterials
+      - name: culture
+      - name: illustration
+      - name: location
+      - name: product
+      - name: productcategory
+      - name: productcosthistory
+      - name: productdescription
+      - name: productdocument
+      - name: productinventory
+      - name: productlistpricehistory
+      - name: productmodel
+      - name: productmodelillustration
+      - name: productmodelproductdescriptionculture
+      - name: productproductphoto
+      - name: productsubcategory
+      - name: scrapreason
+      - name: transactionhistoryarchive
+      - name: unitmeasure
+      - name: workorder
+      - name: workorderrouting  
+
+
+      - name: productvendor
+      - name: department     
+      - name: employee
+      - name: employeedepartmenthistory
+      - name: employeepayhistory
+
+      - name: jobcandidate
+
+      - name: purchaseorderdetail
+      - name: purchaseorderheader
+
+      - name: shift
+      - name: shipmethod
+      - name: transactionhistory
+
+      - name: vendor
+     
