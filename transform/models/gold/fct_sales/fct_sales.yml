@@ -1,0 +1,73 @@
+version: 2
+
+models:
+  - name: fct_sales
+    description: "{{ doc('fct_sales__description') }}"
+    
+    columns:
+      - name: pk_order
+        description: Chave primária da fato de vendas.
+        data_tests: ['not_null']
+        
+      - name: pk_sales_order_detail
+        description: chave primária dos registros de detalhe do pedido
+
+      - name: fk_customer 
+        description: número de identificação do cliente. Chave estrangeira para Customer.Pk_Customer.
+
+      - name: fk_store
+        description: chave estrangeira para os registros da tabela de lojas de clientes.
+
+      - name: fk_employee 
+        description: número de identificação do funcionário responsável pela venda. Chave estrangeira para Employee.Pk_Employee.
+
+      - name: fk_territory 
+        description: chave estrangeira para o território em que a venda foi realizada.
+
+      - name: fk_product
+        description: produto vendido ao cliente. Chave estrangeira para Product.Pk_Product
+
+      - name: fk_sales_reason
+        description: chave estrangeira para os registros de motivos para a compra
+
+      - name: fk_credit_card
+        description: chave estrangeira para os registros na tabela dimensão de cartões de crédito
+
+      - name: account_number
+        description: referência do número da contabilidade financeira.
+
+      - name: order_date
+        description: data em que o pedido de venda foi criado.
+
+      - name: due_date
+        description: data em que o pedido é devido ao cliente.
+
+      - name: ship_date
+        description: data em que o pedido foi enviado ao cliente.
+
+      - name: status
+        description: status atual do pedido
+
+      - name: order_subtotal
+        description: valor subtotal da venda
+
+      - name: order_tax_mt
+        description: valor do imposto.
+        
+      - name: order_freight
+        description: custo do envio
+
+      - name: order_total_due
+        description: total devido pelo cliente.
+
+      - name: order_quantity
+        description: quantidade encomendada por produto.
+
+      - name: unit_price
+        description: preço de venda de um único produto.
+
+      - name: unit_price_discount
+        description: valor do desconto.
+
+      - name: total_value
+        description: valor total 
