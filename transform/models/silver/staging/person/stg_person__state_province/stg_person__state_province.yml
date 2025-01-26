@@ -5,16 +5,24 @@ models:
     description: "{{ doc('stg_person__state_province__description') }}" 
 
     columns:
-      - name: state_province_id
-        description: "{{ doc('stg_person__state_province__state_province_id') }}"
+      - name: state_province_uid
+        description: "{{ doc('stg_person__state_province__state_province_uid') }}"
         data_tests: ['unique', 'not_null']
 
-      - name: country_id
-        description: "{{ doc('stg_person__state_province__country_id') }}"
+      - name: territory_uid
+        description: "{{ doc('stg_person__state_province__territory_uid') }}"
+
+      - name: country_region_uid
+        description: "{{ doc('stg_person__state_province__country_region_uid') }}"
+
+      - name: state_province_id
+        description: "{{ doc('stg_person__state_province__state_province_id') }}"
+
+      - name: territory_id
+        description: "{{ doc('stg_person__state_province__territory_id') }}"
 
       - name: state_province_code
         description: "{{ doc('stg_person__state_province__state_province_code') }}"
 
       - name: state_province_name
         description: "{{ doc('stg_person__state_province__state_province_name') }}"
-

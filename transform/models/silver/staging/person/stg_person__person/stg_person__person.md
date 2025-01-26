@@ -2,8 +2,8 @@
 Tabela com informações de pessoas envolvidas com as atividades da AdventureWorks, incluindo funcionários, contatos de clientes e contatos de fornecedores.
 {% enddocs %}
 
-{% docs stg_person__person__person_id %}
-Chave primária para registros de pessoas.
+{% docs stg_person__person__person_uid %}
+Identificador universal de pessoa.
 {% enddocs %}
 
 {% docs stg_person__person__person_type %}

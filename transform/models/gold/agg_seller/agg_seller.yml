@@ -2,21 +2,21 @@ version: 2
 
 models:
   - name: agg_seller
-    description: "{{ doc('agg_seller__description') }}" 
+    description: "{{ doc('agg_seller__description') }}"
       
     columns:
       - name: seller_uid
-        description: "{{ doc('stg_sales__credit_card__pk_credit_card') }}" 
+        description: "{{ doc('stg_sales__sales_person__sales_person_uid') }}"
         data_tests: ['unique', 'not_null']
 
       - name: seller_name
-        description: "{{ doc('stg_sales__credit_card__credit_card_type') }}" 
+        description: "{{ doc('stg_person__person__person_name') }}"
 
       - name: job_title
-        description: "{{ doc('stg_sales__credit_card__credit_card_type') }}" 
+        description: "{{ doc('stg_human_resources__employee__job_title') }}"
 
       - name: total_orders
-        description: "{{ doc('stg_sales__credit_card__credit_card_type') }}" 
-      
+        description: "{{ doc('agg_seller__total_orders') }}"
+
       - name: total_value
-        description: "{{ doc('stg_sales__credit_card__credit_card_type') }}" 
+        description: "{{ doc('agg_seller__total_value') }}"

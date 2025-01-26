@@ -2,7 +2,7 @@ with
     sales_person as (
         select
             sales_person_uid
-            , fk_territory
+            , territory_uid
         from {{ ref('stg_sales__sales_person') }}
 
     )

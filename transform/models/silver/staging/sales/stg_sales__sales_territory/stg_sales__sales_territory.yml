@@ -5,15 +5,21 @@ models:
     description: "{{ doc('stg_sales__sales_territory__description') }}" 
 
     columns:
-      - name: territory_id
-        description: "{{ doc('stg_sales__sales_territory__territory_id') }}"
+      - name: territory_uid
+        description: "{{ doc('stg_sales__sales_territory__territory_uid') }}"
         data_tests: ['unique', 'not_null']
 
-      - name: territory_name
-        description: "{{ doc('stg_sales__sales_territory__territory_name') }}"
+      - name: country_region_uid
+        description: "{{ doc('stg_sales__sales_territory__country_region_uid') }}"
+
+      - name: territory_id
+        description: "{{ doc('stg_sales__sales_territory__territory_id') }}"
 
       - name: country_region_code
         description: "{{ doc('stg_sales__sales_territory__country_region_code') }}"
+
+      - name: territory_name
+        description: "{{ doc('stg_sales__sales_territory__territory_name') }}"
 
       - name: territory_group
         description: "{{ doc('stg_sales__sales_territory__territory_group') }}"

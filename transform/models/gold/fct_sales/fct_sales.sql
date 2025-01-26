@@ -22,7 +22,7 @@ with
     , reason as (
         select
             sales_reason_header.sales_order_uid,
-            array_agg(distinct sales_reason.sales_reason_type) AS sales_reason_type
+            array_agg(distinct sales_reason.sales_reason_name) AS sales_reason_name
         from sales_reason_header
         left join sales_reason on sales_reason_header.sales_reason_uid = sales_reason.sales_reason_uid
         group by 1
@@ -41,14 +41,14 @@ with
             , sales.due_date
             , sales.ship_date
             , case
-                when sales.status = 1 then 'in process'
-                when sales.status = 2 then 'approved'
-                when sales.status = 3 then 'backordered'
-                when sales.status = 4 then 'rejected'
-                when sales.status = 5 then 'shipped'
-                when sales.status = 6 then 'cancelled'
-              end as status
-            , reason.sales_reason_type
+                when sales.status_code = 1 then 'in process'
+                when sales.status_code = 2 then 'approved'
+                when sales.status_code = 3 then 'backordered'
+                when sales.status_code = 4 then 'rejected'
+                when sales.status_code = 5 then 'shipped'
+                when sales.status_code = 6 then 'cancelled'
+              end as status_name
+            , reason.sales_reason_name
             , sales_detail.order_quantity
             , sales_detail.unit_price
             , sales_detail.unit_price_discount

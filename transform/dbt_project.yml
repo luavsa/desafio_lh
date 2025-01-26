@@ -33,9 +33,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   desafio_lh:
     silver:
-      materialized: view # <-- Name of the project. If you renamed your project you have to change this as well
-      schema: silver
+      +materialized: view
+      +schema: silver
+      +persist_docs: {"relation": true, "columns": true}
     gold:
-      materialized: table
-      schema: gold
+      +materialized: table
+      +schema: gold
+      +persist_docs: {"relation": true, "columns": true}
 

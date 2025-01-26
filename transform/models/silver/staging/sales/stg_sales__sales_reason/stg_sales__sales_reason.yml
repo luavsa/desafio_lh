@@ -5,12 +5,15 @@ models:
     description: "{{ doc('stg_sales__sales_reason__description') }}" 
 
     columns:
-      - name: pk_sales_reason
-        description: "{{ doc('stg_sales__sales_reason__pk_sales_reason') }}"
+      - name: sales_reason_uid
+        description: "{{ doc('stg_sales__sales_reason__sales_reason_uid') }}"
         data_tests: ['unique', 'not_null']
 
-      - name: nm_sales_reason
-        description: "{{ doc('stg_sales__sales_reason__nm_sales_reason') }}"
+      - name: sales_reason_id
+        description: "{{ doc('stg_sales__sales_reason__sales_reason_id') }}"
+
+      - name: sales_reason_name
+        description: "{{ doc('stg_sales__sales_reason__sales_reason_name') }}"
 
       - name: sales_reason_type
         description: "{{ doc('stg_sales__sales_reason__sales_reason_type') }}"

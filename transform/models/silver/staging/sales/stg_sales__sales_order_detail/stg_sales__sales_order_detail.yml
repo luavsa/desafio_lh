@@ -5,24 +5,27 @@ models:
     description: "{{ doc('stg_sales__sales_order_detail__description') }}" 
 
     columns:
-      - name: pk_sales_order_detail
-        description: "{{ doc('stg_sales__sales_order_detail__pk_sales_order_detail') }}"
+      - name: sales_order_detail_uid
+        description: "{{ doc('stg_sales__sales_order_detail__sales_order_detail_uid') }}"
         data_tests: ['unique', 'not_null']
 
-      - name: fk_sales_order
-        description: "{{ doc('stg_sales__sales_order_detail__fk_sales_order') }}"
+      - name: sales_order_uid
+        description: "{{ doc('stg_sales__sales_order_detail__sales_order_uid') }}"
+
+      - name: product_uid
+        description: "{{ doc('stg_sales__sales_order_detail__product_uid') }}"
+
+      - name: special_offer_uid
+        description: "{{ doc('stg_sales__sales_order_detail__special_offer_uid') }}"
+
+      - name: sales_order_detail_id
+        description: "{{ doc('stg_sales__sales_order_detail__sales_order_detail_id') }}"
 
       - name: carrier_tracking_number
         description: "{{ doc('stg_sales__sales_order_detail__carrier_tracking_number') }}"
 
       - name: order_quantity
         description: "{{ doc('stg_sales__sales_order_detail__order_quantity') }}"
-
-      - name: fk_product
-        description: "{{ doc('stg_sales__sales_order_detail__fk_product') }}"
-
-      - name: fk_special_offer
-        description: "{{ doc('stg_sales__sales_order_detail__fk_special_offer') }}"
         
       - name: unit_price
         description: "{{ doc('stg_sales__sales_order_detail__unit_price') }}"

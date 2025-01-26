@@ -5,9 +5,21 @@ models:
     description: "{{ doc('stg_sales__customer__description') }}" 
     
     columns:
+      - name: customer_uid
+        description: "{{ doc('stg_sales__customer__customer_uid') }}"
+        data_tests: ['unique', 'not_null']
+
+      - name: person_uid
+        description: "{{ doc('stg_sales__customer__person_uid') }}"
+
+      - name: store_uid
+        description: "{{ doc('stg_sales__customer__store_uid') }}"
+
+      - name: territory_uid
+        description: "{{ doc('stg_sales__customer__territory_uid') }}"
+
       - name: customer_id
         description: "{{ doc('stg_sales__customer__customer_id') }}"
-        data_tests: ['unique', 'not_null']
 
       - name: person_id
         description: "{{ doc('stg_sales__customer__person_id') }}"

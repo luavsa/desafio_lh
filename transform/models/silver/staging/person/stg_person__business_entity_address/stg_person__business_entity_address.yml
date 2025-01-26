@@ -5,9 +5,15 @@ models:
     description: "{{ doc('stg_person__business_entity_address__description') }}" 
     
     columns:
-      - name: business_entity_id
-        description: "{{ doc('stg_person__business_entity_address__business_entity_id') }}"
+      - name: entity_address_uid
+        description: "{{ doc('stg_person__business_entity_address__entity_address_uid') }}"
+
+      - name: address_uid
+        description: "{{ doc('stg_person__business_entity_address__address_uid') }}"
         data_tests: ['unique', 'not_null']
+
+      - name: entity_address_id
+        description: "{{ doc('stg_person__business_entity_address__entity_address_id') }}"
 
       - name: address_id
         description: "{{ doc('stg_person__business_entity_address__address_id') }}"

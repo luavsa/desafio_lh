@@ -2,12 +2,20 @@
 Tabela com informações das subcategorias de produtos.
 {% enddocs %}
 
+{% docs stg_production__product_subcategory__product_subcategory_uid %}
+Identificador universal da subcategoria do produto.
+{% enddocs %}
+
+{% docs stg_production__product_subcategory__product_category_uid %}
+Identificador universal da subcategoria do produto.
+{% enddocs %}
+
 {% docs stg_production__product_subcategory__product_subcategory_id %}
-Chave primária para registros de subcategorias de produto.
+Identificador da subcategoria do produto, proveniente do Adventure Works.
 {% enddocs %}
 
 {% docs stg_production__product_subcategory__product_category_id %}
-Número de identificação da categoria do produto. Chave estrangeira para productt_category.
+Identificador da categoria do produto, proveniente do Adventure Works.
 {% enddocs %}
 
 {% docs stg_production__product_subcategory__product_subcategory_name %}

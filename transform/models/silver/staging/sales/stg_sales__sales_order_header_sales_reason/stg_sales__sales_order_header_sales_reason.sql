@@ -3,8 +3,6 @@ with
        select 
            {{ dbt_utils.generate_surrogate_key(['salesorderid']) }} as sales_order_uid
            , {{ dbt_utils.generate_surrogate_key(['salesreasonid']) }} as sales_reason_uid
-           , cast(salesorderid as int) as sales_order_id
-           , cast(salesreasonid as int) as sales_reason_id
        from {{ source('aw_sales', 'salesorderheadersalesreason') }}
    )
 

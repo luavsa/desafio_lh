@@ -2,12 +2,83 @@ version: 2
 
 models:
   - name: obt_sales
-    description: "{{ doc('obt_sales__description') }}" 
-      
+    description: "{{ doc('obt_sales__description') }}"
+    
     columns:
-      - name: pk_credit_card
-        description: "{{ doc('stg_sales__credit_card__pk_credit_card') }}" 
+
+      - name: order_uid
+        description: "{{ doc('stg_sales__sales_order_header__sales_order_uid') }}"
+        data_tests: ['not_null']
+
+      - name: sales_order_detail_uid
+        description: "{{ doc('stg_sales__sales_order_detail__sales_order_detail_uid') }}"
         data_tests: ['unique', 'not_null']
 
+      - name: order_date
+        description: "{{ doc('stg_sales__sales_order_header__order_date') }}"
+      
+      - name: due_date
+        description: "{{ doc('stg_sales__sales_order_header__due_date') }}"
+      
+      - name: ship_date
+        description: "{{ doc('stg_sales__sales_order_header__ship_date') }}"
+      
+      - name: sales_reason_name
+        description: "{{ doc('stg_sales__sales_reason__sales_reason_name') }}"
+
+      - name: order_quantity
+        description: "{{ doc('stg_sales__sales_order_detail__order_quantity') }}"
+        
+      - name: unit_price
+        description: "{{ doc('stg_sales__sales_order_detail__unit_price') }}"
+        
+      - name: unit_price_discount
+        description: "{{ doc('stg_sales__sales_order_detail__unit_price_discount') }}"
+        
+      - name: total_value
+        description: "{{ doc('fct_sales__total_value') }}"
+
+      - name: customer_type
+        description: "{{ doc('dim_customer__customer_type') }}"
+
+      - name: customer_name
+        description: "{{ doc('stg_person__person__person_name') }}"
+
+      - name: territory_group
+        description: "{{ doc('stg_sales__sales_territory__territory_group') }}"
+
+      - name: territory_name
+        description: "{{ doc('stg_sales__sales_territory__territory_name') }}"
+
+      - name: country_region_code
+        description: "{{ doc('stg_sales__sales_territory__country_region_code') }}"
+
+      - name: seller_name
+        description: "{{ doc('stg_person__person__person_name') }}"
+
+      - name: job_title
+        description: "{{ doc('stg_human_resources__employee__job_title') }}"
+
+      - name: hire_date
+        description: "{{ doc('stg_human_resources__employee__birth_date') }}"
+
+      - name: product_name
+        description: "{{ doc('stg_production__product__product_name') }}"
+
+      - name: product_number
+        description: "{{ doc('stg_production__product__product_number') }}"
+
+      - name: product_line
+        description: "{{ doc('stg_production__product__product_line') }}"
+
+      - name: product_category
+        description: "{{ doc('stg_production__product_category__product_category_name') }}"
+
+      - name: product_subcategory
+        description: "{{ doc('stg_production__product_subcategory__product_subcategory_name') }}"
+
+      - name: product_model
+        description: "{{ doc('stg_production__product_model__product_model_name') }}"
+
       - name: credit_card_type
-        description: "{{ doc('stg_sales__credit_card__credit_card_type') }}" 
+        description: "{{ doc('stg_sales__credit_card__credit_card_type') }}"
