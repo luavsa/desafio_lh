@@ -1,15 +1,15 @@
 with 
-    card as (
+    credit_card as (
         select *
         from {{ ref('stg_sales__credit_card') }}
     )
 
     , joined as (
         select
-            card.credit_card_uid
-            , card.credit_card_id
-            , card.credit_card_type
-        from card
+            credit_card_uid
+            , credit_card_id
+            , credit_card_type
+        from credit_card
     )
 
 select *

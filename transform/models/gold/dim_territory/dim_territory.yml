@@ -2,12 +2,21 @@ version: 2
 
 models:
   - name: dim_territory
-    description: "{{ doc('dim_territory__description') }}" 
+    description: "{{ doc('dim_territory__description') }}"
       
     columns:
-      - name: pk_credit_card
-        description: "{{ doc('stg_sales__credit_card__pk_credit_card') }}" 
+      - name: territory_uid
+        description: "{{ doc('stg_sales__sales_territory__territory_uid') }}"
         data_tests: ['unique', 'not_null']
 
-      - name: credit_card_type
-        description: "{{ doc('stg_sales__credit_card__credit_card_type') }}" 
+      - name: territory_id
+        description: "{{ doc('stg_sales__sales_territory__territory_id') }}"
+
+      - name: territory_group
+        description: "{{ doc('stg_sales__sales_territory__territory_group') }}"
+
+      - name: territory_name
+        description: "{{ doc('stg_sales__sales_territory__territory_name') }}"
+
+      - name: country_region_code
+        description: "{{ doc('stg_sales__sales_territory__country_region_code') }}"

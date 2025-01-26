@@ -10,7 +10,7 @@ with sales as (
             , order_date
             , due_date
             , ship_date
-            , sales_reason_type
+            , sales_reason_name
             , order_quantity
             , unit_price
             , unit_price_discount
@@ -68,7 +68,7 @@ with sales as (
             , sales.order_date
             , sales.due_date
             , sales.ship_date
-            , sales.sales_reason_type
+            , sales.sales_reason_name
             , sales.order_quantity
             , sales.unit_price
             , sales.unit_price_discount

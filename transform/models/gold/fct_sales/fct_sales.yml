@@ -5,69 +5,52 @@ models:
     description: "{{ doc('fct_sales__description') }}"
     
     columns:
-      - name: pk_order
-        description: Chave primária da fato de vendas.
+      - name: order_uid
+        description: "{{ doc('stg_sales__sales_order_header__sales_order_uid') }}"
         data_tests: ['not_null']
+
+      - name: sales_order_detail_uid
+        description: "{{ doc('stg_sales__sales_order_detail__sales_order_detail_uid') }}"
+        data_tests: ['unique', 'not_null']
+
+      - name: customer_uid
+        description: "{{ doc('stg_sales__sales_order_header__customer_uid') }}"
+
+      - name: seller_uid
+        description: "{{ doc('stg_sales__sales_order_header__sales_person_uid') }}"
+
+      - name: territory_uid
+        description: "{{ doc('stg_sales__sales_order_header__territory_uid') }}"
         
-      - name: pk_sales_order_detail
-        description: chave primária dos registros de detalhe do pedido
-
-      - name: fk_customer 
-        description: número de identificação do cliente. Chave estrangeira para Customer.Pk_Customer.
-
-      - name: fk_store
-        description: chave estrangeira para os registros da tabela de lojas de clientes.
-
-      - name: fk_employee 
-        description: número de identificação do funcionário responsável pela venda. Chave estrangeira para Employee.Pk_Employee.
-
-      - name: fk_territory 
-        description: chave estrangeira para o território em que a venda foi realizada.
-
-      - name: fk_product
-        description: produto vendido ao cliente. Chave estrangeira para Product.Pk_Product
-
-      - name: fk_sales_reason
-        description: chave estrangeira para os registros de motivos para a compra
-
-      - name: fk_credit_card
-        description: chave estrangeira para os registros na tabela dimensão de cartões de crédito
-
-      - name: account_number
-        description: referência do número da contabilidade financeira.
+      - name: credit_card_uid
+        description: "{{ doc('stg_sales__sales_order_header__credit_card_uid') }}"
+        
+      - name: product_uid
+        description: "{{ doc('stg_sales__sales_order_detail__product_uid') }}"
 
       - name: order_date
-        description: data em que o pedido de venda foi criado.
-
+        description: "{{ doc('stg_sales__sales_order_header__order_date') }}"
+      
       - name: due_date
-        description: data em que o pedido é devido ao cliente.
-
+        description: "{{ doc('stg_sales__sales_order_header__due_date') }}"
+      
       - name: ship_date
-        description: data em que o pedido foi enviado ao cliente.
-
-      - name: status
-        description: status atual do pedido
-
-      - name: order_subtotal
-        description: valor subtotal da venda
-
-      - name: order_tax_mt
-        description: valor do imposto.
-        
-      - name: order_freight
-        description: custo do envio
-
-      - name: order_total_due
-        description: total devido pelo cliente.
+        description: "{{ doc('stg_sales__sales_order_header__ship_date') }}"
+      
+      - name: status_name
+        description: "{{ doc('stg_sales__sales_order_header__status_code') }}"
+      
+      - name: sales_reason_name
+        description: "{{ doc('stg_sales__sales_reason__sales_reason_name') }}"
 
       - name: order_quantity
-        description: quantidade encomendada por produto.
-
+        description: "{{ doc('stg_sales__sales_order_detail__order_quantity') }}"
+        
       - name: unit_price
-        description: preço de venda de um único produto.
-
+        description: "{{ doc('stg_sales__sales_order_detail__unit_price') }}"
+        
       - name: unit_price_discount
-        description: valor do desconto.
-
+        description: "{{ doc('stg_sales__sales_order_detail__unit_price_discount') }}"
+        
       - name: total_value
-        description: valor total 
+        description: "{{ doc('fct_sales__total_value') }}"

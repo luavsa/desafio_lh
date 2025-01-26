@@ -6,14 +6,14 @@ models:
       
     columns:
       - name: seller_uid
-        description: "{{ doc('stg_sales__credit_card__pk_credit_card') }}" 
+        description: "{{ doc('stg_sales__sales_person__sales_person_uid') }}" 
         data_tests: ['unique', 'not_null']
 
       - name: seller_name
-        description: "{{ doc('stg_sales__credit_card__credit_card_type') }}" 
+        description: "{{ doc('stg_person__person__person_name') }}" 
 
       - name: job_title
-        description: "{{ doc('stg_sales__credit_card__credit_card_type') }}" 
+        description: "{{ doc('stg_human_resources__employee__job_title') }}" 
 
       - name: hire_date
-        description: "{{ doc('stg_sales__credit_card__credit_card_type') }}" 
+        description: "{{ doc('stg_human_resources__employee__birth_date') }}" 
