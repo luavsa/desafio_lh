@@ -2,25 +2,19 @@ version: 2
 
 sources:
   - name: aw_sales
-    database: ADVENTURE_WORKS_RAW_DB  
+    database: ADVENTURE_WORKS_RAW_DB
     schema: sales
-    tables: 
-      - name: countryregioncurrency
+    loaded_at_field: _sdc_extracted_at
+    freshness:
+      warn_after: {count: 24, period: hour}
+      error_after: {count: 5000, period: day}
+    tables:
       - name: creditcard
-      - name: currency
-      - name: currencyrate
       - name: customer
-      - name: personcreditcard
       - name: salesorderdetail
       - name: salesorderheader
       - name: salesorderheadersalesreason
       - name: salesperson
-      - name: salespersonquotahistory
       - name: salesreason
-      - name: salestaxrate
       - name: salesterritory
-      - name: salesterritoryhistory
-      - name: shoppingcartitem
-      - name: specialoffer
-      - name: specialofferproduct
       - name: store
