@@ -2,17 +2,15 @@ version: 2
 
 sources:
   - name: aw_person
-    database: ADVENTURE_WORKS_RAW_DB  
+    database: ADVENTURE_WORKS_RAW_DB
     schema: person
+    loaded_at_field: _sdc_extracted_at
+    freshness:
+      warn_after: {count: 24, period: hour}
+      error_after: {count: 5000, period: day}
     tables:
-      - name: address
-      - name: addresstype
-      - name: businessentity 
+      - name: address 
       - name: businessentityaddress
-      - name: businessentitycontact
-      - name: contacttype
       - name: countryregion
-      - name: emailaddress
       - name: person
-      - name: personphone
       - name: stateprovince
