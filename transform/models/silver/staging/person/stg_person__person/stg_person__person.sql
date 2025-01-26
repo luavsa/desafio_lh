@@ -11,9 +11,7 @@ with
 
     , person as (
         select 
-            {{ dbt_utils.generate_surrogate_key([
-                'person_id'
-            ]) }} as person_uid
+            {{ dbt_utils.generate_surrogate_key(['person_id']) }} as person_uid
             , case person_type
                 when 'sc' then 'store contact'
                 when 'in' then 'individual customer'

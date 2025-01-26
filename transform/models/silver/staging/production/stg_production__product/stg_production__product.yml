@@ -5,9 +5,12 @@ models:
     description: "{{ doc('stg_production__product__description') }}" 
 
     columns:
+      - name: product_uid
+        description: "{{ doc('stg_production__product__product_uid') }}"
+        data_tests: ['unique', 'not_null']
+  
       - name: product_id
         description: "{{ doc('stg_production__product__product_id') }}"
-        data_tests: ['unique', 'not_null']
 
       - name: product_model_id
         description: "{{ doc('stg_production__product__product_model_id') }}"

@@ -5,9 +5,15 @@ models:
     description: "{{ doc('stg_production__product_subcategory__description') }}" 
     
     columns:
+      - name: product_subcategory_uid
+        description: "{{ doc('stg_production__product_subcategory__product_subcategory_uid') }}"
+        data_tests: ['unique', 'not_null']
+
+      - name: product_category_uid
+        description: "{{ doc('stg_production__product_subcategory__product_category_uid') }}"
+
       - name: product_subcategory_id
         description: "{{ doc('stg_production__product_subcategory__product_subcategory_id') }}"
-        data_tests: ['unique', 'not_null']
 
       - name: product_category_id
         description: "{{ doc('stg_production__product_subcategory__product_category_id') }}"

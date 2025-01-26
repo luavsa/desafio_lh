@@ -2,14 +2,22 @@
 Tabela de referência cruzada mapeando clientes, fornecedores e funcionários para seus endereços.
 {% enddocs %}
 
-{% docs stg_person__business_entity_address__business_entity_id %}
-Chave primária. Chave estrangeira para BusinessEntity.BusinessEntityID.
+{% docs stg_person__business_entity_address__entity_address_uid %}
+Identificador universal do tipo de entidade de endereço.
+{% enddocs %}
+
+{% docs stg_person__business_entity_address__address_uid %}
+Identificador universal do endereço.
+{% enddocs %}
+
+{% docs stg_person__business_entity_address__entity_address_id %}
+Identificador do tipo de entidade de endereço, proveniente do Adventure Works.
 {% enddocs %}
 
 {% docs stg_person__business_entity_address__address_id %}
-Chave primária. Chave estrangeira para Address.AddressID.
+Identificador do endereço proveniente do Adventure Works.
 {% enddocs %}
 
 {% docs stg_person__business_entity_address__address_type_id %}
-Chave primária. Chave estrangeira para AddressType.AddressTypeID.
+Identificador do tipo de endereço proveniente do Adventure Works.
 {% enddocs %}

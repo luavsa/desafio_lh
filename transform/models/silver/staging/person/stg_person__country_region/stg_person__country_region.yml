@@ -5,9 +5,12 @@ models:
     description: "{{ doc('stg_person__country_region__description') }}" 
     
     columns:
-      - name: business_entity_id
-        description: "{{ doc('stg_person__country_region__country_id') }}"
+      - name: country_region_uid
+        description: "{{ doc('stg_person__country_region__country_region_uid') }}"
         data_tests: ['unique', 'not_null']
 
-      - name: country_name
-        description: "{{ doc('stg_person__country_region__country_name') }}"
+      - name: country_region_code
+        description: "{{ doc('stg_person__country_region__country_region_code') }}"
+
+      - name: country_region_name
+        description: "{{ doc('stg_person__country_region__country_region_name') }}"

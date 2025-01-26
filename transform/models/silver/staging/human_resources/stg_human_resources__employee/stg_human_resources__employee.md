@@ -1,12 +1,12 @@
 {% docs stg_human_resources__employee__description %}
-Tabela com nformações de funcionários da AdventureWorks, como data de nascimento, gênero, departamento e cargo.
+Tabela com informações de funcionários da Adventure Works, como data de nascimento, gênero, departamento e cargo.
 {% enddocs %}
 
-{% docs stg_human_resources__employee__pk_employee %}
-Chave primária para registros de funcionários. Chave estrangeira para a tabela business_entity.
+{% docs stg_human_resources__employee__employee_uid %}
+Identificador universal do funcionário.
 {% enddocs %}
 
-{% docs stg_human_resources__employee__id_national_number %}
+{% docs stg_human_resources__employee__national_number %}
 Número de identificação nacional exclusivo, como um número de previdência social.
 {% enddocs %}
 
@@ -23,10 +23,9 @@ Estado civil.
 {% enddocs %}
 
 {% docs stg_human_resources__employee__gender %}
-Gênero.
+Gênero do funcionário.
 {% enddocs %}
 
 {% docs stg_human_resources__employee__hire_date %}
 Funcionário contratado nesta data.
 {% enddocs %}
-

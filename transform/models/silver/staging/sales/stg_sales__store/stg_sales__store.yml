@@ -5,9 +5,15 @@ models:
     description: "{{ doc('stg_sales__store__description') }}" 
 
     columns:
-      - name: business_entity_id
-        description: "{{ doc('stg_sales__store__business_entity_id') }}"
+      - name: store_uid
+        description: "{{ doc('stg_sales__store__store_uid') }}"
         data_tests: ['unique', 'not_null']
+
+      - name: sales_person_uid
+        description: "{{ doc('stg_sales__store__sales_person_uid') }}"
+
+      - name: store_id
+        description: "{{ doc('stg_sales__store__store_id') }}"
 
       - name: sales_person_id
         description: "{{ doc('stg_sales__store__sales_person_id') }}"

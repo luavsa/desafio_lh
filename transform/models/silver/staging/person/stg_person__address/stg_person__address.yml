@@ -5,9 +5,15 @@ models:
     description: "{{ doc('stg_person__address__description') }}" 
 
     columns:
+      - name: address_uid
+        description: "{{ doc('stg_person__address__address_uid') }}"
+        data_tests: ['unique', 'not_null']
+
+      - name: state_province_uid
+        description: "{{ doc('stg_person__address__state_province_uid') }}"
+
       - name: address_id
         description: "{{ doc('stg_person__address__address_id') }}"
-        data_tests: ['unique', 'not_null']
 
       - name: state_province_id
         description: "{{ doc('stg_person__address__state_province_id') }}"

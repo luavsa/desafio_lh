@@ -1,17 +1,21 @@
 {% docs stg_production__product__description %}
-Tabela com informações de produtos vendidos ou utilizados na fabricação de produtos vendidos pela AdventureWorks.
+Tabela de cadastros de produtos vendidos ou utilizados na fabricação de produtos vendidos pela Adventure Works.
+{% enddocs %}
+
+{% docs stg_production__product__product_uid %}
+Identificador universal do produto.
 {% enddocs %}
 
 {% docs stg_production__product__product_id %}
-Chave primária para registros de produtos.
+Identificador do produto, proveniente do Adventure Works.
 {% enddocs %}
 
 {% docs stg_production__product__product_model_id %}
-O produto é um membro deste modelo de produto. Chave estrangeira para product_model.
+Identificador do modelo do produto, proveniente do Adventure Works.
 {% enddocs %}
 
 {% docs stg_production__product__product_subcategory_id %}
-O produto é um membro desta subcategoria de produto. Chave estrangeira para product_subcategory.
+Identificador da sub categoria do produto, proveniente do Adventure Works.
 {% enddocs %}
 
 {% docs stg_production__product__product_name %}
@@ -25,4 +29,3 @@ Número de identificação exclusivo do produto.
 {% docs stg_production__product__product_line %}
 Linha do produto. R = Estrada, M = Montanha, T = Turismo, S = Padrão.
 {% enddocs %}
-

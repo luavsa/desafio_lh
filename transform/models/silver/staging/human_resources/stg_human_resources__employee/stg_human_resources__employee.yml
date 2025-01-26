@@ -5,12 +5,12 @@ models:
     description: "{{ doc('stg_human_resources__employee__description') }}" 
 
     columns:
-      - name: pk_employee
-        description: "{{ doc('stg_human_resources__employee__pk_employee') }}"
+      - name: employee_uid
+        description: "{{ doc('stg_human_resources__employee__employee_uid') }}"
         data_tests: ['unique', 'not_null']
 
-      - name: id_national_number
-        description: "{{ doc('stg_human_resources__employee__id_national_number') }}"
+      - name: national_number
+        description: "{{ doc('stg_human_resources__employee__national_number') }}"
 
       - name: job_title
         description: "{{ doc('stg_human_resources__employee__job_title') }}"

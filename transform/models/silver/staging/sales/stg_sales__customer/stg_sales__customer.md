@@ -1,19 +1,35 @@
 {% docs stg_sales__customer__description %}
-Informações atuais de clientes da AdvetureWorks. 
+Informações atuais dos clientes do Adveture Works. 
+{% enddocs %}
+
+{% docs stg_sales__customer__customer_uid %}
+Identificador universal do cliente.
+{% enddocs %}
+
+{% docs stg_sales__customer__person_uid %}
+Identificador universal da pessoa.
+{% enddocs %}
+
+{% docs stg_sales__customer__store_uid %}
+Identificador universal da loja.
+{% enddocs %}
+
+{% docs stg_sales__customer__territory_uid %}
+Identificador universal do teritório.
 {% enddocs %}
 
 {% docs stg_sales__customer__customer_id %}
-Chave primária para registros de clientes.
+Identificador do cliente, proveniente do Adventure Works.
 {% enddocs %}
 
 {% docs stg_sales__customer__person_id %}
-Chave estrangeira que referencia a tabela person.
+Identificador da pessoa, proveniente do Adventure Works.
 {% enddocs %}
 
 {% docs stg_sales__customer__store_id %}
-Chave estrangeira que referencia a tabela store.
+Identificador da loja, proveniente do Adventure Works.
 {% enddocs %}
 
 {% docs stg_sales__customer__territory_id %}
-Código do território em que o cliente está localizado. Chave estrangeira que referencia a tabela sales_territory.
+Identificador do teritório, proveniente do Adventure Works.
 {% enddocs %}

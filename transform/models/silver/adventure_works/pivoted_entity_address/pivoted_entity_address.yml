@@ -6,11 +6,14 @@ models:
 
     columns:
       - name: entity_address_uid
-        description: "{{ doc('pivoted_entity_address__entity_address_uid') }}"
+        description: "{{ doc('stg_person__business_entity_address__entity_address_uid') }}"
         data_tests: ['unique', 'not_null']
 
       - name: entity_address_id
-        description: "{{ doc('pivoted_entity_address__entity_address_id') }}"
+        description: "{{ doc('stg_person__business_entity_address__entity_address_id') }}"
+
+      - name: address_type_id
+        description: "{{ doc('stg_person__business_entity_address__address_type_id') }}"
 
       - name: city_name
         description: "{{ doc('stg_person__address__city_name') }}"
@@ -19,4 +22,4 @@ models:
         description: "{{ doc('stg_person__state_province__state_province_name') }}"
 
       - name: country_region_name
-        description: "{{ doc('stg_person__country_region__country_name') }}"
+        description: "{{ doc('stg_person__country_region__country_region_name') }}"

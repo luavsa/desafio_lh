@@ -2,10 +2,14 @@
 Informações de cartão de crédito de clientes.
 {% enddocs %}
 
-{% docs stg_sales__credit_card__pk_credit_card %}
-Chave primária para registros de cartão de crédito.
+{% docs stg_sales__credit_card__credit_card_uid %}
+Identificador universal do cartão de crédito.
+{% enddocs %}
+
+{% docs stg_sales__credit_card__credit_card_id %}
+Identificador do cartão de crédito, proveniente do Adventure Works.
 {% enddocs %}
 
 {% docs stg_sales__credit_card__credit_card_type %}
-Nome do cartão de crédito.
+Nome do tipo de cartão de crédito.
 {% enddocs %}

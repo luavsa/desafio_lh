@@ -2,12 +2,20 @@
 Tabela com informações de endereço residencial de funcionários, clientes e vendedores.
 {% enddocs %}
 
+{% docs stg_person__address__address_uid %}
+Identificador universal do endereço.
+{% enddocs %}
+
+{% docs stg_person__address__state_province_uid %}
+Identificador universal do estado ou província.
+{% enddocs %}
+
 {% docs stg_person__address__address_id %}
-Chave primária para registros de endereço.
+Identificador do endereço proveniente do Adventure Works.
 {% enddocs %}
 
 {% docs stg_person__address__state_province_id %}
-Número de identificação único para estado ou província de cada endereço. Este id é usado como Chave estrangeira na tabela state_province.
+Identificador do estado ou província proveniente do Adventure Works.
 {% enddocs %}
 
 {% docs stg_person__address__city_name %}

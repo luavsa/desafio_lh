@@ -5,8 +5,8 @@ models:
     description: "{{ doc('stg_person__person__description') }}" 
     
     columns:
-      - name: person_id
-        description: "{{ doc('stg_person__person__person_id') }}"
+      - name: person_uid
+        description: "{{ doc('stg_person__person__person_uid') }}"
         data_tests: ['unique', 'not_null']
 
       - name: person_type

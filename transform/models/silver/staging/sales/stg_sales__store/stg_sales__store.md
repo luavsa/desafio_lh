@@ -2,12 +2,20 @@
 Clientes (revendedores) de produtos da Adventure Works.
 {% enddocs %}
 
-{% docs stg_sales__store__business_entity_id %}
-Chave primária. Chave estrangeira para Customer.
+{% docs stg_sales__store__store_uid %}
+Identificador universal da loja.
+{% enddocs %}
+
+{% docs stg_sales__store__sales_person_uid %}
+Identificador universal do vendedor atribuído ao cliente.
+{% enddocs %}
+
+{% docs stg_sales__store__store_id %}
+Identificador da loja, proveniente do Adventure Works.
 {% enddocs %}
 
 {% docs stg_sales__store__sales_person_id %}
-Identificação do vendedor atribuído ao cliente. Chave estrangeira para SalesPerson.
+Identificador do vendedor atribuído ao cliente, proveniente do Adventure Works.
 {% enddocs %}
 
 {% docs stg_sales__store__store_name %}
