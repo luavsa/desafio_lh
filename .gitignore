@@ -6,3 +6,6 @@ logs/
 .vscode
 .venv-airflow/
 .venv-meltano/
+.env/
+.env
+.user.yml
