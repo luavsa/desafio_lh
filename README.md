@@ -1,25 +1,86 @@
-# Indicium Academy
+# Projeto de Dados Adventure Works
 
-Repositório para ser utilizado no desafio para a obtenção da certificação de Analytics Engineer by Indicium. Faça o fork deste repositório e o utilize durante o desafio para fazer a insgestão das tabelas do SAP do Adventure Works.
+## Resumo do Projeto
+Este projeto tem como objetivo otimizar a capacidade analítica da Adventure Works, implementando uma plataforma de dados alinhada à metodologia do **Modern Data Stack**. Utilizamos ferramentas modernas para extrair, transformar e carregar dados, além de criar modelos analíticos e preditivos que apoiam a tomada de decisões estratégicas e operacionais.
 
-## Instruções
+## Ferramentas Utilizadas
+- **Snowflake**: [Data Warehouse](UPWZUSV-KGA83012.snowflakecomputing.com/)
+- **Power BI**: [Dashboard Publicado](https://powerbi.microsoft.com/)
 
-Todas as tabelas do banco fonte do SAP da Adventure Works serão carregadas como seeds pelo dbt. Os arquivos .csv com os dados já estão na pasta de seeds.
+## Documentação completa do projeto:
+- **Google Docs**: [Documentação Oficial do Projeto](https://docs.google.com/document/d/1kCUOuAsw38e6qdeVEnur4Jd5EfS6kBnRlHRVm5C4u7A/edit?usp=sharing/)
 
-Para fazer o carregamento de todas as tabelas usem o comando:
-- `dbt seed`
-
-Para carregar uma tabela especifíca utilizem o comando
-- `dbt seed -s nome_do_csv`
-
-### Problemas comuns
-
-Em caso a linha de comando do dbt fique com o status de estar sempre carregando, ou, o job do comando `dbt seed` fique rodando indefinitivamente mesmo após as 64 tabelas forem carregadas você precisará reiniciar o terminal. Para isso, clique nos três pontos no canto inferior direito ou no lado direito da linha de comando e escolha a opção `Restart IDE`.
+## Outros links úteis
+- **Meltano**: [Documentação](https://docs.meltano.com/)
+- **dbt (Data Build Tool)**: [Documentação](https://docs.getdbt.com/)
+- **Apache Airflow**: [Documentação](https://airflow.apache.org/docs/)
+- **Statsmodels e StatsForecast** (para análises preditivas no Snowflake): [Statsmodels](https://www.statsmodels.org/) | [StatsForecast](https://nixtla.github.io/statsforecast/)
 
 
-## Recursos:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [dbt community](http://community.getbdt.com/) to learn from other analytics engineers
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+## Passo a Passo para Iniciar o Projeto
+1. **Clone o repositório**:
+   ```bash
+   git clone <url-do-repositorio>
+   cd <nome-do-repositorio>
+   ```
+
+2. **Configure o Ambiente Virtual**:
+   
+   Na pasta `extract`, crie e ative um ambiente virtual para o Meltano:
+
+     ```bash
+     python -m venv .venv-meltano
+     source .venv-meltano/bin/activate
+     pip install meltano
+     meltano init
+     ```
+
+   Na pasta `transform`, crie e ative um ambiente virtual para o dbt, faça o mesmo na pasta orchestrate, criando uma venv separada para o Airflow.
+
+
+3. **Configure Variáveis de Ambiente**: adicione as credenciais no arquivo `.env` local, contendo configurações para Snowflake e PostgreSQL. Em seguida, execute o comando source .env
+
+4. **Instale os Conectores Meltano**:
+   ```bash
+   meltano add extractor tap-postgres
+   meltano add loader target-snowflake
+   ```
+
+5. **Valide as Conexões**
+
+    - **PostgreSQL**:
+    ```bash
+    meltano run tap-postgres
+    ```
+    
+    - **Snowflake**:
+    ```bash
+    meltano run target-snowflake
+    ```
+
+     - **dbt**:
+    ```bash
+    dbt debug
+    ```
+
+6. **Inicie o Apache Airflow**
+    - Configure e execute o servidor Airflow localmente:
+    ```bash
+    airflow standalone
+    ```
+
+7. **Acesse os Dashboards no Power BI**
+    - Conecte-se ao Snowflake para acessar relatórios e insights.
+
+## Boas Práticas Aplicadas
+- **Uso de variáveis de ambiente no arquivo `.env`** para garantir segurança e flexibilidade.
+
+- **Documentação automatizada de modelos no dbt** e persistência no Snowflake com `persist_docs`.
+
+- **Testes de qualidade no dbt** (schema, valores nulos e duplicados) para garantir a integridade dos dados.
+
+- **Organização modular do código**, separando as camadas de modelagem em Bronze, Silver e Gold.
+
+- **Rastreamento de versões e métricas de modelos preditivos** com MLflow.
+
+- **Filtros interativos nos dashboards** para personalização das análises.
