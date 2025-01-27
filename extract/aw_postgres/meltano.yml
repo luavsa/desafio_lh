@@ -1,0 +1,38 @@
+version: 1
+default_environment: dev
+project_id: bef5d773-a199-4883-99e8-f429ea69d409
+environments:
+- name: dev
+- name: staging
+- name: prod
+plugins:
+  extractors:
+  - name: tap-postgres
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/tap-postgres.git
+    config:
+      host: 35.239.223.162
+      port: 5432
+      user: "{{ env_var('POSTGRES_USER') }}"
+      password: "{{ env_var('POSTGRES_PASSWORD') }}"
+      database: "{{ env_var('POSTGRES_DATABASE') }}"
+    select:
+    - sales-*.*
+    - person-*.*
+    - purchasing-*.*
+    - humanresources-*.*
+    - production-*.*
+
+  loaders:
+  - name: target-snowflake
+    variant: meltanolabs
+    pip_url: meltanolabs-target-snowflake
+    config:
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      role: "{{ env_var('SNOWFLAKE_ROLE') }}"
+      warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE') }}"
+      database: "{{ env_var('SNOWFLAKE_DATABASE') }}"
+      schema: "{{ env_var('SNOWFLAKE_SCHEMA') }}"
+      cloud_provider: azure
